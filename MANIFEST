@@ -1,0 +1,7 @@
+Build.PL
+lib/URI/Find/Simple.pm
+MANIFEST			This list of files
+NINJA
+t/find.t
+META.yml
+Makefile.PL

@@ -8,6 +8,8 @@ use Carp qw(croak);
 our @ISA = qw( Exporter );
 our @EXPORT_OK = qw( list_uris change_uris );
 
+our $VERSION = 0.7;
+
 sub list_uris {
   my $text = shift;
   croak "expected a text string" unless defined($text);
