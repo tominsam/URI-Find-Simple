@@ -48,7 +48,7 @@ URI::Find::Simple - a simple interface to URI::Find
 
 =head1 SYNOPSIS
 
-  use URI::Find::List qw( list_uris );
+  use URI::Find::Simple qw( list_uris );
   my @list = list_uris($text);
 
   my $html = change_uris($text, sub { "<a href=\"$_[0]\">$_[0]</a>" } );
