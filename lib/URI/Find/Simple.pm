@@ -60,6 +60,16 @@ some text somehow, and don't want to mess with callback interfaces.
 This module uses URI::Find, but hides the callback interface, providing two
 functions - one to list all the uris, and one to change all the uris.
 
+=head2 list_uris( text )
+
+returns a list of all the uris in the passed string, in the form output by
+the URI->as_string function, not the form that they exist in the text.
+
+=head2 change_uris( text, sub { code } )
+
+the passed sub is called for every found uri in the text, and it's return
+value is substituted into the string. Returns the changed string.
+
 =head1 CAVEATS, BUGS, ETC
 
 The change_uris function is only just nicer than the callback interface. In
