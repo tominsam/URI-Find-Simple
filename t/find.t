@@ -18,7 +18,6 @@ ok($@ =~ /expected a code ref/, "can't call change_uris without subref");
 ok(my $text = <<EOF, "set text string");
 this is a long string with http://www.news.com urls in it in
 <http://various.com> different forms. mailto:tom\@jerakeen.org.
-some urls are itms://weird.things/
 Some urls are ftp://not.http.urls/and/have/paths.
 EOF
 
