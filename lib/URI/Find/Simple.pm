@@ -10,7 +10,7 @@ use Encode qw( encode );
 our @ISA = qw( Exporter );
 our @EXPORT_OK = qw( list_uris change_uris );
 
-our $VERSION = 0.7;
+our $VERSION = 1.0;
 
 our $CHARSET = "utf-8";
 
