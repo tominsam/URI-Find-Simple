@@ -1,6 +1,5 @@
-Build.PL
 lib/URI/Find/Simple.pm
 MANIFEST			This list of files
 t/find.t
-META.yml
 Makefile.PL
+Changes
