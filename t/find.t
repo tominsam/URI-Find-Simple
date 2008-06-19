@@ -42,3 +42,8 @@ EOF
 
 is($new_text, $expected, "expcted matches new text");
 
+my $unicode = "This is a unicode string with a http://weird.com/url/\x{e9}withunicode ok";
+@list = URI::Find::Simple::list_uris($unicode);
+
+is(scalar(@list), 1, "got 1 uri");
+is($list[0], 'http://weird.com/url/%C3%A9withunicode', "got news.com uri");

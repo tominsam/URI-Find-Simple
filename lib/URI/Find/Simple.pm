@@ -4,11 +4,15 @@ use strict;
 
 use URI::Find;
 use Carp qw(croak);
+use Encode qw( encode );
+
 
 our @ISA = qw( Exporter );
 our @EXPORT_OK = qw( list_uris change_uris );
 
 our $VERSION = 0.7;
+
+our $CHARSET = "utf-8";
 
 sub list_uris {
   my $text = shift;
@@ -20,6 +24,12 @@ sub list_uris {
     push @list, $object->as_string;
     return $text;
   } );
+  
+  if ($CHARSET) {
+    my $copy = encode($CHARSET, $text);
+    $copy =~ s/([^\000-\177])/'%' . sprintf("%x", ord($1))/eg;
+    $text = $copy;
+  }
   $uri_find->find(\$text);
   return @list;
 }
