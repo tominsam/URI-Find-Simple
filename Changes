@@ -1,8 +1,11 @@
 Revision history for URI::Title
 
+1.01 2008/09/15
+  - Clearer license
+  - Better method of requiring perl 5.8.1
+
 1.0 2008/06/19
   - Unicode support improved.
 
 0.7 2004/03/16 (Revision 643)
   - Initial release  
-  

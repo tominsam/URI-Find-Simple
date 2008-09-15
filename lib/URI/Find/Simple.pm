@@ -10,7 +10,7 @@ use Encode qw( encode );
 our @ISA = qw( Exporter );
 our @EXPORT_OK = qw( list_uris change_uris );
 
-our $VERSION = 1.0;
+our $VERSION = 1.01;
 
 our $CHARSET = "utf-8";
 
@@ -105,4 +105,7 @@ L<URI::Find>, L<URI::Find::Iterator>, L<URI>
 =head1 AUTHOR
 
 Copyright (c) 2004 Tom Insam <tom@jerakeen.org> inspired by Paul Mison <paul@husk.org>
+
+This program is free software; you can redistribute it
+and/or modify it under the same terms as Perl itself.
 
