@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 use lib qw(lib);
-use Test::More no_plan => 1;
+use Test::More tests => 16;
 
 use_ok('URI::Find::Simple');
 
@@ -36,7 +36,7 @@ ok(my $new_text = URI::Find::Simple::change_uris($text, sub {
 
 ok(my $expected = <<EOF, "set expected text string");
 this is a long string with [[ http://www.news.com/ ]] urls in it in
-[[ http://various.com/ ]] different forms. [[ mailto:tom\@jerakeen.org ]].
+<[[ http://various.com/ ]]> different forms. [[ mailto:tom\@jerakeen.org ]].
 Some urls are [[ ftp://not.http.urls/and/have/paths ]].
 EOF
 

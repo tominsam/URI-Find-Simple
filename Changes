@@ -1,5 +1,9 @@
 Revision history for URI::Title
 
+1.01 2010/09/06
+  - Fix tests for URI::Find change
+  - Count tests properly
+
 1.01 2008/09/15
   - Clearer license
   - Better method of requiring perl 5.8.1
