@@ -1,5 +1,8 @@
 Revision history for URI::Title
 
+1.03 2010/10/25
+  - Package properly
+
 1.01 2010/09/06
   - Fix tests for URI::Find change
   - Count tests properly

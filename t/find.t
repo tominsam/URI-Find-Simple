@@ -17,7 +17,7 @@ ok($@ =~ /expected a code ref/, "can't call change_uris without subref");
 
 ok(my $text = <<EOF, "set text string");
 this is a long string with http://www.news.com urls in it in
-<http://various.com> different forms. mailto:tom\@jerakeen.org.
+http://various.com different forms. mailto:tom\@jerakeen.org.
 Some urls are ftp://not.http.urls/and/have/paths.
 EOF
 
@@ -36,7 +36,7 @@ ok(my $new_text = URI::Find::Simple::change_uris($text, sub {
 
 ok(my $expected = <<EOF, "set expected text string");
 this is a long string with [[ http://www.news.com/ ]] urls in it in
-<[[ http://various.com/ ]]> different forms. [[ mailto:tom\@jerakeen.org ]].
+[[ http://various.com/ ]] different forms. [[ mailto:tom\@jerakeen.org ]].
 Some urls are [[ ftp://not.http.urls/and/have/paths ]].
 EOF
 
